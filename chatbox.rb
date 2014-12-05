@@ -10,7 +10,7 @@ def green(text); colorize(text, 32); end
 # puts 'Importing tags       ' + red('FAILED') + ''
 
 def prompt_bot
-	puts ' ' + red('Bot: ') + ' '
+  puts ' ' + red('Bot: ') + ' '
 end 
 
 def prompt_human
@@ -35,7 +35,8 @@ RESPONSES = { 'goodbye' => 'bye',
               'I am from (.*)' => 'I have never been to %{c1}',
               'For fun I (.*)' => 'I also %{c1}, but only on weekends',
               'Talking to computers is (.*)' => 'I find talking to humans %{c1}',
-              'Coding is (.*)' => 'Without coding being %{c1} I wouldn\'t be here talking to you'}
+              'Coding is (.*)' => 'Without coding being %{c1} I wouldn\'t be here talking to you',
+              'quit' => 'quitting...'}
 
 
 
@@ -63,9 +64,8 @@ prompt_human
 teams = gets.chomp
 while(input = gets.chomp) do
   puts get_response(input)
-  if input.upcase == 'quit'
-  	puts 'quitting' 
-  	break
-end
+  
+  if input == 'quit'
+    break 
+  end
 end 
-
