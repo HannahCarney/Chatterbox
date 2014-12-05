@@ -39,7 +39,10 @@ RESPONSES = { 'goodbye' => 'bye',
               'I know (.*), (.*) and (.*) languages' => 'I also know %{c1}, %{c2} and %{c3} but then again I know every language.',
               'quit' => 'quitting...'}
 
-
+fname = "responses.txt"
+somefile = File.open(fname, "w")
+somefile.puts RESPONSES
+somefile.close
 
 prompt_bot
 puts "Hello, what's your name?"
