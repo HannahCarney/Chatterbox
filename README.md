@@ -1,18 +1,6 @@
 Chatterbox
 ==========
-<a class="octicon-button tooltipped tooltipped-n js-update-url-with-hash"
-                 aria-label="Clicking this button will fork this project so you can edit the file"
-                 href="/makersacademy/chatterbox-challenge/edit/master/README.md"
-                 data-method="post" rel="nofollow"><span class="octicon octicon-pencil"></span></a>
 
-            <a class="octicon-button danger tooltipped tooltipped-s"
-               href="/makersacademy/chatterbox-challenge/delete/master/README.md"
-               aria-label="Fork this project and delete file"
-               data-method="post" data-test-id="delete-blob-file" rel="nofollow">
-          <span class="octicon octicon-trashcan"></span>
-        </a>
-      </div><!-- /.actions -->
-    </div>
     
   <div id="readme" class="blob instapaper_body">
     <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
@@ -94,83 +82,7 @@ bye
   </div>
 </div>
 
-<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" style="display:none">Jump to Line</a>
-<div id="jump-to-line" style="display:none">
-  <form accept-charset="UTF-8" class="js-jump-to-line-form">
-    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
-    <button type="submit" class="button">Go</button>
-  </form>
-</div>
 
-        </div>
-
-      </div><!-- /.repo-container -->
-      <div class="modal-backdrop"></div>
-    </div><!-- /.container -->
-  </div><!-- /.site -->
+        
 
 
-    </div><!-- /.wrapper -->
-
-      <div class="container">
-  <div class="site-footer" role="contentinfo">
-    <ul class="site-footer-links right">
-      <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="https://developer.github.com">API</a></li>
-      <li><a href="http://training.github.com">Training</a></li>
-      <li><a href="http://shop.github.com">Shop</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-
-    </ul>
-
-    <a href="/" aria-label="Homepage">
-      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-    </a>
-
-    <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.04982s from github-fe135-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
-        <li><a href="/site/terms">Terms</a></li>
-        <li><a href="/site/privacy">Privacy</a></li>
-        <li><a href="/security">Security</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div><!-- /.site-footer -->
-</div><!-- /.container -->
-
-
-    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
-  <div class="fullscreen-container js-suggester-container">
-    <div class="textarea-wrap">
-      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
-      <div class="suggester-container">
-        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
-      </div>
-    </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
-      <span class="mega-octicon octicon-screen-normal"></span>
-    </a>
-    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
-      aria-label="Switch themes">
-      <span class="octicon octicon-color-mode"></span>
-    </a>
-  </div>
-</div>
-
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="octicon octicon-alert"></span>
-      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
-      Something went wrong with that request. Please try again.
-    </div>
-
-
-      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-153d6254b838872c8db73c8bd92905913f6f5b2164b7e40e5292286bd5a39403.js" type="text/javascript"></script>
-      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-886fe84cd93793c0e83129f222d7621e25bd43d46a8da650ab27872729a03871.js" type="text/javascript"></script>
-      
-      
-  </body>
-</html>
