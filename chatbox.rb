@@ -22,7 +22,7 @@ def get_response(input)
   key = RESPONSES.keys.select {|k| /#{k}/ =~ input }.sample
   /#{key}/ =~ input
   response = RESPONSES[key]
-  response.nil? ? 'sorry?' : response % { c1: $1, c2: $2}
+  response.nil? ? 'sorry?' : response % { c1: $1, c2: $2, c3: $3}
 end
 
 
@@ -36,6 +36,7 @@ RESPONSES = { 'goodbye' => 'bye',
               'For fun I (.*)' => 'I also %{c1}, but only on weekends',
               'Talking to computers is (.*)' => 'I find talking to humans %{c1}',
               'Coding is (.*)' => 'Without coding being %{c1} I wouldn\'t be here talking to you',
+              'I know (.*), (.*) and (.*) languages' => 'I also know %{c1}, %{c2} and %{c3} but then again I know every language.',
               'quit' => 'quitting...'}
 
 
