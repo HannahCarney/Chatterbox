@@ -1,3 +1,6 @@
+def colorize(text, color_code)
+  "\e[#{color_code}m#{text}\e[0m"
+end
 
 
 def red(text); colorize(text, 31); end
@@ -36,11 +39,12 @@ RESPONSES = { 'goodbye' => 'bye',
               'Coding is (.*)' => 'Without coding being %{c1} I wouldn\'t be here talking to you',
               'I know (.*), (.*) and (.*) languages' => 'I also know %{c1}, %{c2} and %{c3} but then again I know every language.',
               'quit' => 'quitting...'}
-
-fname = "responses.txt"
-somefile = File.open(fname, "w")
-somefile.puts RESPONSES
-somefile.close
+def save_responses
+  fname = "responses.txt"
+  somefile = File.open(fname, "w")
+  somefile.puts RESPONSES
+  somefile.close
+end
 
 prompt_bot
 puts "Hello, what's your name?"
@@ -68,6 +72,8 @@ while(input = gets.chomp) do
   puts get_response(input)
   
   if input == 'quit'
+    save_responses
     break 
   end
 end 
+
