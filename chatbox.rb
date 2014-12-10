@@ -10,12 +10,14 @@ def green(text); colorize(text, 32); end
 #puts 'Importing categories  ' + green('DONE') + ' '
 # puts 'Importing tags       ' + red('FAILED') + ''
 
-def prompt_bot
+def prompt_bot(question)
   puts ' ' + red('Bot: ') + ' '
+  puts(question) 
 end 
 
 def prompt_human
     puts ' ' + green('You: ') + ' '
+    gets.chomp
 end
 
 
@@ -25,6 +27,7 @@ def get_response(input)
   response = RESPONSES[key]
   response.nil? ? 'sorry?' : response % { c1: $1, c2: $2, c3: $3}
 end
+
 
 
 RESPONSES = { 'goodbye' => 'bye', 
@@ -39,6 +42,8 @@ RESPONSES = { 'goodbye' => 'bye',
               'Coding is (.*)' => 'Without coding being %{c1} I wouldn\'t be here talking to you',
               'I know (.*), (.*) and (.*) languages' => 'I also know %{c1}, %{c2} and %{c3} but then again I know every language.',
               'quit' => 'quitting...'}
+
+
 def save_responses
   fname = "responses.txt"
   somefile = File.open(fname, "w")
@@ -46,28 +51,20 @@ def save_responses
   somefile.close
 end
 
-prompt_bot
-puts "Hello, what's your name?"
-prompt_human
-name = gets.chomp
-prompt_bot
-puts "Hello #{name}"
-prompt_bot
-puts "Where do you go to school?"
-prompt_human
-school = gets.chomp
-prompt_bot
-puts "Do you like Ruby?"
-prompt_human
-ruby = gets.chomp
-prompt_bot
-puts "What is your favorite computer language?"
-prompt_human
-language = gets.chomp
-prompt_bot
-puts "Do you like to work in teams?"
-prompt_human
-teams = gets.chomp
+def bot_question(question)
+  prompt_bot(question)
+  prompt_human
+end
+
+name = bot_question("Hello, what's your name?")
+
+prompt_bot("Hello #{name}")
+
+school = bot_question("Where do you go to school?")
+ruby = bot_question("Do you like Ruby?")
+language = bot_question("What is your favorite computer language?")
+teams = bot_question("Do you like to work in teams?")
+
 while(input = gets.chomp) do
   puts get_response(input)
   
